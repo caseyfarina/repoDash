@@ -1,21 +1,121 @@
 {
-  "generated": "2026-08-01T15:19:54.617Z",
+  "generated": "2026-08-01T17:16:43.983Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
     "repos": 12,
-    "active": 3,
-    "stale": 8,
+    "active": 7,
+    "stale": 3,
     "dirty": 0,
     "blocked": 0
   },
   "repos": [
     {
+      "name": "egtk-docs",
+      "category": "docs",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T17:01:40Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Rewrote audio.html to reflect the current GameAudioManager and ActionPlaySound components"
+      ],
+      "next": [
+        "Continue the documentation audit pass, keeping pages in sync with eventGameToolKit"
+      ],
+      "blocked": []
+    },
+    {
+      "name": "eventGameToolKit",
+      "category": "unity",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T16:59:34Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Updated the audio docs page, fixed the ActionPlaySound HelpURL, and added applicationFPSLimiting"
+      ],
+      "next": [
+        "Sync the next round of component changes from the gameToolKit dev harness"
+      ],
+      "blocked": []
+    },
+    {
+      "name": "classLectureSearch",
+      "category": "education",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T16:22:48Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Added Week 15 outlines for AVC 185/200/287; search data auto-updates weekly with new lecture content"
+      ],
+      "next": [
+        "Keep ingesting weekly lecture chapters and outlines as the semester continues"
+      ],
+      "blocked": []
+    },
+    {
+      "name": "classManagement",
+      "category": "education",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T16:21:47Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Hardened the weekly lecture-transcript pipeline: status tracking, validation, resume, and retry"
+      ],
+      "next": [
+        "Keep running the weekly lecture processing pipeline as new lectures post"
+      ],
+      "blocked": []
+    },
+    {
+      "name": "psappha-Midi-Visualizer",
+      "category": "web",
+      "status": "paused",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T16:09:45Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Documented the foreground-Bash default and GitHub Pages deployment; dark mode and refined layout shipped"
+      ],
+      "next": [
+        "Add MIDI channel filtering and GM drum-name pitch labels; SVG export of the current canvas"
+      ],
+      "blocked": []
+    },
+    {
       "name": "repoDash",
       "category": "",
       "status": "",
       "branch": "main",
-      "last_commit_iso": "2026-08-01T13:56:44Z",
+      "last_commit_iso": "2026-08-01T15:19:55Z",
       "last_commit_rel": "",
       "stale": false,
       "dirty": false,
@@ -84,86 +184,6 @@
       "next": [
         "Continue building out the Light Entity + Capsule scene (LightEntityScene assembly)"
       ],
-      "blocked": []
-    },
-    {
-      "name": "psappha-Midi-Visualizer",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-06-01T17:40:44Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
-      "blocked": []
-    },
-    {
-      "name": "classManagement",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-05-07T17:25:20Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
-      "blocked": []
-    },
-    {
-      "name": "classLectureSearch",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-05-07T17:03:17Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
-      "blocked": []
-    },
-    {
-      "name": "eventGameToolKit",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-05-06T05:14:34Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
-      "blocked": []
-    },
-    {
-      "name": "egtk-docs",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-05-01T17:52:33Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
       "blocked": []
     },
     {
