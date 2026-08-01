@@ -1,15 +1,95 @@
 {
-  "generated": "2026-08-01T17:16:43.983Z",
+  "generated": "2026-08-01T18:13:35.744Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
     "repos": 12,
-    "active": 7,
-    "stale": 3,
+    "active": 10,
+    "stale": 0,
     "dirty": 0,
     "blocked": 0
   },
   "repos": [
+    {
+      "name": "repoDash",
+      "category": "tools",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T17:39:21Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Stood up GitHub Pages + Actions pipeline (MC_TOKEN secret, hourly build); switched accent color to pink; populated STATE.md across tracked repos"
+      ],
+      "next": [
+        "Watch MC_TOKEN expiration (Aug 30, 2026) and rotate before the hourly Action starts failing"
+      ],
+      "blocked": []
+    },
+    {
+      "name": "radialUnityPlayback",
+      "category": "unity",
+      "status": "paused",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T17:20:35Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Initial project check-in - Unity scaffold for radial media playback"
+      ],
+      "next": [
+        "Define and build the first radial playback feature"
+      ],
+      "blocked": []
+    },
+    {
+      "name": "egtk_DressTemplate",
+      "category": "unity",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T17:19:17Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Replaced per-component clothing arrays with a central ClothingDatabase"
+      ],
+      "next": [
+        "Continue building out the dress template using the Event Game Toolkit"
+      ],
+      "blocked": []
+    },
+    {
+      "name": "gameToolKit",
+      "category": "unity",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T17:18:27Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Dev harness for eventGameToolKit: updated audio docs page, fixed ActionPlaySound HelpURL, added applicationFPSLimiting"
+      ],
+      "next": [
+        "Continue component development, then sync changes to the eventGameToolKit package repo"
+      ],
+      "blocked": []
+    },
     {
       "name": "egtk-docs",
       "category": "docs",
@@ -111,22 +191,6 @@
       "blocked": []
     },
     {
-      "name": "repoDash",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-08-01T15:19:55Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
-      "blocked": []
-    },
-    {
       "name": "phoenixTreeMapProject",
       "category": "unity",
       "status": "active",
@@ -184,54 +248,6 @@
       "next": [
         "Continue building out the Light Entity + Capsule scene (LightEntityScene assembly)"
       ],
-      "blocked": []
-    },
-    {
-      "name": "gameToolKit",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-05-01T17:52:32Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
-      "blocked": []
-    },
-    {
-      "name": "egtk_DressTemplate",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-04-30T17:07:47Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
-      "blocked": []
-    },
-    {
-      "name": "radialUnityPlayback",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-04-24T22:21:23Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
       "blocked": []
     }
   ]
