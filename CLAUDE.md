@@ -41,6 +41,19 @@ Two optional extras:
 - To force-show a repo that's been quiet longer than the window: add its path
   to `projects.txt` (it'll be marked ★).
 
+## Deployment status
+
+The hosted dashboard is live at https://caseyfarina.github.io/repoDash/ (GitHub Pages,
+`main` branch / `docs` folder), fed hourly by the Option B GitHub Action
+(`.github/workflows/status.yml` + `bin/build-data.mjs`) described in DEPLOY.md.
+
+- **`MC_TOKEN` expires 2026-08-30.** It's a fine-grained PAT (Contents + Metadata,
+  read-only, all repositories) stored as an Actions secret on this repo. When it expires
+  the hourly Action starts failing silently — regenerate the token at
+  github.com/settings/personal-access-tokens and update the secret before then.
+- Accent color is pink (`--orange: #ff2d95` in `docs/index.html` — variable name unchanged,
+  only the value).
+
 ## Notes
 
 - The dashboard runs fine standalone (`bash bin/status.sh`) with no LLM — wire
