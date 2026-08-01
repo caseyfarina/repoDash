@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01T08:34:25.764Z",
+  "generated": "2026-08-01T10:49:11.231Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -10,6 +10,22 @@
     "blocked": 0
   },
   "repos": [
+    {
+      "name": "repoDash",
+      "category": "",
+      "status": "",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T08:34:26Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [],
+      "next": [],
+      "blocked": []
+    },
     {
       "name": "phoenixTreeMapProject",
       "category": "unity",
@@ -68,22 +84,6 @@
       "next": [
         "Continue building out the Light Entity + Capsule scene (LightEntityScene assembly)"
       ],
-      "blocked": []
-    },
-    {
-      "name": "repoDash",
-      "category": "",
-      "status": "",
-      "branch": "main",
-      "last_commit_iso": "2026-08-01T06:05:58Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [],
-      "next": [],
       "blocked": []
     },
     {
