@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01T19:35:52.908Z",
+  "generated": "2026-08-01T21:09:35.343Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -11,11 +11,31 @@
   },
   "repos": [
     {
+      "name": "midiFighterForUnity",
+      "category": "unity",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-01T20:49:02Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Planning runtime MF64 pad-preset switching; refreshed the Radial 2 resume-point notes"
+      ],
+      "next": [
+        "Build the Radial 2 (sunburst) drawer layout"
+      ],
+      "blocked": []
+    },
+    {
       "name": "repoDash",
       "category": "tools",
       "status": "active",
       "branch": "main",
-      "last_commit_iso": "2026-08-01T18:13:36Z",
+      "last_commit_iso": "2026-08-01T19:35:53Z",
       "last_commit_rel": "",
       "stale": false,
       "dirty": false,
@@ -207,26 +227,6 @@
       ],
       "next": [
         "Finish Jen's AR scene"
-      ],
-      "blocked": []
-    },
-    {
-      "name": "midiFighterForUnity",
-      "category": "unity",
-      "status": "active",
-      "branch": "main",
-      "last_commit_iso": "2026-08-01T06:26:12Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [
-        "Planning runtime MF64 pad-preset switching; refreshed the Radial 2 resume-point notes"
-      ],
-      "next": [
-        "Build the Radial 2 (sunburst) drawer layout"
       ],
       "blocked": []
     },
