@@ -1,0 +1,10 @@
+# Mission Control — pinned repos (OPTIONAL).
+#
+# You normally don't need this file — the dashboard auto-discovers repos from
+# roots.txt. Use pins only for repos you want ALWAYS shown, even if they've
+# been quiet longer than the activity window, or that live outside your roots.
+# Pinned repos are marked with ★.
+#
+# One repo path per line:
+
+# ~/dev/some-dormant-repo-i-still-watch

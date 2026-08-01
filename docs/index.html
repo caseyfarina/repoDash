@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mission Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --fg:#ededed;
+    --white:#ffffff;
+    --orange:#ff4b12;
+    --dim:#6f6f6f;
+    --rule:rgba(255,255,255,.16);
+    --display:"Rubik Mono One", monospace;
+    --label:"Silkscreen", monospace;
+    --body:"VT323", monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg)}
+  body{
+    font-family:var(--body);
+    font-size:20px;               /* VT323 runs small — bump the base */
+    line-height:1.15;
+    -webkit-font-smoothing:none;
+    padding:0 clamp(14px,4vw,56px);
+    max-width:1400px;margin:0 auto;
+    min-height:100vh;
+  }
+  .rule{height:1px;background:var(--rule);border:0;margin:0}
+
+  /* ---- top bar ---- */
+  .topbar{display:flex;justify-content:space-between;align-items:center;
+    padding:12px 0;font-family:var(--label);font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--dim)}
+  .topbar .brand{color:var(--fg)}
+  .cursor::after{content:"_";color:var(--orange);animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .expand{width:34px;height:34px;border:1px solid var(--rule);border-radius:50%;
+    display:grid;place-items:center;color:var(--fg);cursor:pointer;background:none;
+    font-family:var(--body);font-size:18px;transition:border-color .15s,color .15s}
+  .expand:hover,.expand:focus-visible{border-color:var(--orange);color:var(--orange);outline:none}
+
+  /* ---- hero wordmark ---- */
+  .hero{padding:clamp(10px,3vw,26px) 0 clamp(14px,3vw,30px)}
+  .wordmark{font-family:var(--display);color:var(--orange);
+    font-size:clamp(2.3rem,12vw,8.6rem);line-height:.86;letter-spacing:-.01em;
+    margin:0;text-transform:uppercase}
+  .wordmark span{display:block}
+
+  /* ---- section label / eyebrow ---- */
+  .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--dim);padding:14px 0 10px}
+
+  /* ---- summary strip ---- */
+  .summary{display:flex;flex-wrap:wrap;gap:clamp(20px,5vw,64px);padding:16px 0}
+  .stat{display:flex;flex-direction:column;gap:2px}
+  .stat .num{font-family:var(--display);font-size:clamp(1.4rem,4vw,2.4rem);
+    line-height:1;color:var(--white)}
+  .stat.alert .num{color:var(--orange)}
+  .stat .lbl{font-family:var(--label);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--dim)}
+
+  /* ---- repo index ---- */
+  .repo{padding:20px 0;display:grid;gap:6px}
+  .repo:hover .ast{transform:rotate(90deg)}
+  .repo-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px 14px}
+  .ast{color:var(--orange);font-family:var(--display);font-size:1.1rem;
+    transition:transform .25s ease;display:inline-block}
+  .repo-name{font-family:var(--display);color:var(--fg);
+    font-size:clamp(1.3rem,3.4vw,2.1rem);line-height:1;text-transform:uppercase;
+    letter-spacing:-.01em;word-break:break-word}
+  .chip{font-family:var(--label);font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;padding:3px 7px;border:1px solid var(--rule);color:var(--dim)}
+  .chip.status-active{color:var(--fg);border-color:var(--fg)}
+  .chip.status-paused{color:var(--dim)}
+  .chip.pinned{color:var(--orange);border-color:var(--orange)}
+
+  .gitline{color:var(--dim);font-size:1rem;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+  .gitline .branch{color:var(--orange)}
+  .gitline .flag{color:var(--orange)}
+  .gitline .sep{color:var(--rule)}
+
+  .now{color:var(--white);font-size:1.05rem;margin:2px 0 0;padding:0;list-style:none}
+  .now li{padding:1px 0}
+  .now li::before{content:"› ";color:var(--orange)}
+  .next{color:var(--dim);font-size:1rem}
+  .next b{color:var(--fg);font-weight:normal}
+  .blocked{display:inline-block;background:var(--orange);color:#000;
+    font-size:.95rem;padding:2px 8px;margin-top:2px}
+  .blocked::before{content:"▲ "}
+
+  /* ---- footer ---- */
+  footer{margin-top:26px;padding:22px 0 40px}
+  .foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .foot-col .fl{font-family:var(--label);font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--fg);display:flex;align-items:center;gap:8px;padding-bottom:6px}
+  .foot-col .fv{color:var(--dim);font-size:1rem;line-height:1.25}
+  .glyph{color:var(--orange)}
+  .empty{color:var(--dim);font-size:1.2rem;padding:40px 0}
+
+  @media (max-width:720px){
+    .foot-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .cursor::after{animation:none}
+    .repo:hover .ast{transform:none}
+    .ast{transition:none}
+  }
+</style>
+</head>
+<body>
+  <hr class="rule">
+  <div class="topbar">
+    <div class="brand">◈ Mission&nbsp;Control&nbsp;<span class="cursor"></span></div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <span id="ts">—</span>
+      <button class="expand" id="refresh" title="Refresh" aria-label="Refresh">⟳</button>
+    </div>
+  </div>
+  <hr class="rule">
+
+  <header class="hero">
+    <h1 class="wordmark"><span>Mission</span><span>Control</span></h1>
+  </header>
+
+  <hr class="rule">
+  <div class="eyebrow" id="window-label">Repos — active in last 4 months</div>
+  <div class="summary" id="summary"></div>
+  <hr class="rule">
+
+  <main id="repos"></main>
+
+  <footer>
+    <hr class="rule" style="margin-bottom:22px">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="fl"><span class="glyph">✳</span> Legend</div>
+        <div class="fv">⚠ stale · ✎ uncommitted · ▲ blocked · ★ pinned</div>
+      </div>
+      <div class="foot-col">
+        <div class="fl"><span class="glyph">◷</span> Updated</div>
+        <div class="fv" id="foot-updated">—</div>
+      </div>
+      <div class="foot-col">
+        <div class="fl"><span class="glyph">◧</span> Window</div>
+        <div class="fv" id="foot-window">—</div>
+      </div>
+      <div class="foot-col">
+        <div class="fl"><span class="glyph">⌁</span> Source</div>
+        <div class="fv">data.json · newest first</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// Embedded sample so the page renders immediately (and on Pages before real
+// data exists). Overwritten by ./data.json when present.
+const SAMPLE = {
+  generated:new Date().toISOString(), window_months:4, stale_days:14,
+  summary:{repos:4,active:2,stale:1,dirty:1,blocked:1},
+  repos:[
+    {name:"proj-fresh",category:"",status:"",branch:"main",
+     last_commit_iso:new Date(Date.now()-6e4).toISOString(),last_commit_rel:"1 minute ago",
+     stale:false,dirty:false,ahead:0,behind:0,pinned:false,now:[],next:[],blocked:[]},
+    {name:"midiFighterForUnity",category:"unity",status:"active",branch:"main",
+     last_commit_iso:new Date(Date.now()-48e5).toISOString(),last_commit_rel:"1 hour ago",
+     stale:false,dirty:false,ahead:2,behind:0,pinned:false,
+     now:["Wiring MIDI Fighter LED velocity mapping","Testing quadrant pad routing"],
+     next:["HSV color ramp on Light Entities"],blocked:[]},
+    {name:"radial-graphic-score",category:"research",status:"paused",branch:"main",
+     last_commit_iso:new Date(Date.now()-55*864e5).toISOString(),last_commit_rel:"8 weeks ago",
+     stale:true,dirty:true,ahead:0,behind:1,pinned:false,
+     now:["Real-time GI landscape survey (URP)"],next:["Benchmark on RTX 3090"],
+     blocked:["Waiting on KlakHap depth-offset fix upstream"]},
+    {name:"eventGameToolKit",category:"tools",status:"active",branch:"release",
+     last_commit_iso:new Date(Date.now()-9*864e5).toISOString(),last_commit_rel:"9 days ago",
+     stale:false,dirty:false,ahead:0,behind:0,pinned:true,
+     now:["Migrating distribution to .unitypackage releases"],next:["Test clean-import GUID resolution"],blocked:[]}
+  ]
+};
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function ago(iso,fallback){
+  if(!iso) return fallback||"";
+  const d=(Date.now()-new Date(iso).getTime())/1000;
+  if(isNaN(d)) return fallback||"";
+  const m=60,h=3600,day=86400,wk=604800,mo=2629800,yr=31557600;
+  const f=(n,u)=>`${Math.floor(n)} ${u}${Math.floor(n)===1?"":"s"} ago`;
+  if(d<m) return "just now";
+  if(d<h) return f(d/m,"minute");
+  if(d<day) return f(d/h,"hour");
+  if(d<wk) return f(d/day,"day");
+  if(d<mo) return f(d/wk,"week");
+  if(d<yr) return f(d/mo,"month");
+  return f(d/yr,"year");
+}
+
+function stat(num,lbl,alert){
+  return `<div class="stat${alert?' alert':''}"><span class="num">${num}</span><span class="lbl">${lbl}</span></div>`;
+}
+
+function repoBlock(r){
+  const chips=[];
+  if(r.status==="active") chips.push(`<span class="chip status-active">active</span>`);
+  else if(r.status==="paused") chips.push(`<span class="chip status-paused">paused</span>`);
+  else if(r.status) chips.push(`<span class="chip">${esc(r.status)}</span>`);
+  if(r.category) chips.push(`<span class="chip">${esc(r.category)}</span>`);
+  if(r.pinned) chips.push(`<span class="chip pinned">★ pinned</span>`);
+
+  const flags=[];
+  const when=ago(r.last_commit_iso,r.last_commit_rel);
+  flags.push(`<span class="branch">${esc(r.branch||"?")}</span>`);
+  flags.push(`<span class="sep">·</span>`);
+  flags.push(r.stale?`<span class="flag">⚠ ${esc(when)}</span>`:`<span>${esc(when)}</span>`);
+  if(r.dirty){flags.push(`<span class="sep">·</span><span class="flag">✎ uncommitted</span>`);}
+  if(r.ahead>0){flags.push(`<span class="sep">·</span><span class="flag">↑${r.ahead}</span>`);}
+  if(r.behind>0){flags.push(`<span class="sep">·</span><span class="flag">↓${r.behind}</span>`);}
+
+  const now=(r.now&&r.now.length)?`<ul class="now">${r.now.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:"";
+  const blocked=(r.blocked&&r.blocked.length)?r.blocked.map(x=>`<div class="blocked">${esc(x)}</div>`).join(""):"";
+  const next=(r.next&&r.next.length)?`<div class="next">next: <b>${esc(r.next[0])}</b></div>`:"";
+
+  return `<div class="repo">
+    <div class="repo-head"><span class="ast">✳</span>
+      <span class="repo-name">${esc(r.name)}</span>${chips.join("")}</div>
+    <div class="gitline">${flags.join("")}</div>
+    ${now}${blocked}${next}
+  </div><hr class="rule">`;
+}
+
+function render(d){
+  const g=d.generated?ago(d.generated):"—";
+  $("#ts").textContent=g;
+  $("#foot-updated").textContent=d.generated?new Date(d.generated).toLocaleString():"—";
+  $("#window-label").textContent=`Repos — active in last ${d.window_months} months`;
+  $("#foot-window").textContent=`${d.window_months} months · stale ${d.stale_days}d`;
+
+  const s=d.summary||{};
+  $("#summary").innerHTML=[
+    stat(s.repos||0,"repos"),
+    stat(s.active||0,"active"),
+    stat(s.stale||0,"stale",s.stale>0),
+    stat(s.dirty||0,"dirty",s.dirty>0),
+    stat(s.blocked||0,"blocked",s.blocked>0),
+  ].join("");
+
+  const repos=d.repos||[];
+  $("#repos").innerHTML = repos.length
+    ? repos.map(repoBlock).join("")
+    : `<div class="empty">No repos committed to in the last ${d.window_months||4} months.</div>`;
+}
+
+async function load(){
+  try{
+    const res=await fetch("./data.json?t="+Date.now(),{cache:"no-store"});
+    if(res.ok){ render(await res.json()); return; }
+  }catch(e){/* fall through to sample */}
+  render(SAMPLE);
+}
+
+$("#refresh").addEventListener("click",load);
+load();
+setInterval(load,60000); // re-fetch every 60s (for hosted/auto-updating data.json)
+</script>
+</body>
+</html>

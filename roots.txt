@@ -1,0 +1,14 @@
+# Mission Control — scan roots.
+# List the directories where your git repos live, one per line. The dashboard
+# finds every git repo under them and shows any with a commit in the last
+# MC_MONTHS months (default 4), newest first.
+#
+# ~ expands to your home dir. On Windows (Git Bash / WSL) use forward slashes,
+# e.g. /c/Users/casey/dev
+#
+# Heavy folders (node_modules, Unity Library/, etc.) are skipped automatically.
+# Uncomment / edit:
+
+# ~/dev
+# ~/projects
+# /c/Users/casey/dev
