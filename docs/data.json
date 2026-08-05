@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-04T23:18:49.626Z",
+  "generated": "2026-08-05T03:33:30.794Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -15,7 +15,7 @@
       "category": "tools",
       "status": "active",
       "branch": "main",
-      "last_commit_iso": "2026-08-04T21:36:21Z",
+      "last_commit_iso": "2026-08-04T23:18:50Z",
       "last_commit_rel": "",
       "stale": false,
       "dirty": false,
