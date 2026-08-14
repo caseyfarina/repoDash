@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14T17:11:50.956Z",
+  "generated": "2026-08-14T18:06:54.660Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -10,6 +10,26 @@
     "blocked": 0
   },
   "repos": [
+    {
+      "name": "repoDash",
+      "category": "tools",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-14T17:11:52Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Stood up GitHub Pages + Actions pipeline (MC_TOKEN secret, hourly build); switched accent color to pink; populated STATE.md across tracked repos"
+      ],
+      "next": [
+        "Watch MC_TOKEN expiration (Aug 30, 2026) and rotate before the hourly Action starts failing"
+      ],
+      "blocked": []
+    },
     {
       "name": "phoenixTreeMapProject",
       "category": "unity",
@@ -27,26 +47,6 @@
       ],
       "next": [
         "Finish Jen's AR scene"
-      ],
-      "blocked": []
-    },
-    {
-      "name": "repoDash",
-      "category": "tools",
-      "status": "active",
-      "branch": "main",
-      "last_commit_iso": "2026-08-14T16:06:26Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [
-        "Stood up GitHub Pages + Actions pipeline (MC_TOKEN secret, hourly build); switched accent color to pink; populated STATE.md across tracked repos"
-      ],
-      "next": [
-        "Watch MC_TOKEN expiration (Aug 30, 2026) and rotate before the hourly Action starts failing"
       ],
       "blocked": []
     },
