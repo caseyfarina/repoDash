@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-15T20:39:20.442Z",
+  "generated": "2026-08-15T21:34:59.495Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
     "repos": 12,
     "active": 10,
-    "stale": 9,
+    "stale": 10,
     "dirty": 0,
     "blocked": 0
   },
@@ -15,7 +15,7 @@
       "category": "tools",
       "status": "active",
       "branch": "main",
-      "last_commit_iso": "2026-08-15T19:34:37Z",
+      "last_commit_iso": "2026-08-15T20:39:21Z",
       "last_commit_rel": "",
       "stale": false,
       "dirty": false,
@@ -57,7 +57,7 @@
       "branch": "main",
       "last_commit_iso": "2026-08-01T20:49:02Z",
       "last_commit_rel": "",
-      "stale": false,
+      "stale": true,
       "dirty": false,
       "ahead": 0,
       "behind": 0,
