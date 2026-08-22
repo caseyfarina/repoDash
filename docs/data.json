@@ -1,21 +1,41 @@
 {
-  "generated": "2026-08-22T15:35:07.297Z",
+  "generated": "2026-08-22T16:41:13.375Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
     "repos": 12,
     "active": 10,
-    "stale": 10,
+    "stale": 9,
     "dirty": 0,
     "blocked": 0
   },
   "repos": [
     {
+      "name": "classLectureSearch",
+      "category": "education",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-22T16:35:12Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Added Week 15 outlines for AVC 185/200/287; search data auto-updates weekly with new lecture content"
+      ],
+      "next": [
+        "Keep ingesting weekly lecture chapters and outlines as the semester continues"
+      ],
+      "blocked": []
+    },
+    {
       "name": "repoDash",
       "category": "tools",
       "status": "active",
       "branch": "main",
-      "last_commit_iso": "2026-08-22T14:38:57Z",
+      "last_commit_iso": "2026-08-22T15:35:08Z",
       "last_commit_rel": "",
       "stale": false,
       "dirty": false,
@@ -167,26 +187,6 @@
       ],
       "next": [
         "Sync the next round of component changes from the gameToolKit dev harness"
-      ],
-      "blocked": []
-    },
-    {
-      "name": "classLectureSearch",
-      "category": "education",
-      "status": "active",
-      "branch": "main",
-      "last_commit_iso": "2026-08-01T16:22:48Z",
-      "last_commit_rel": "",
-      "stale": true,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [
-        "Added Week 15 outlines for AVC 185/200/287; search data auto-updates weekly with new lecture content"
-      ],
-      "next": [
-        "Keep ingesting weekly lecture chapters and outlines as the semester continues"
       ],
       "blocked": []
     },
