@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-25T19:46:02.474Z",
+  "generated": "2026-08-25T20:46:30.279Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -11,11 +11,31 @@
   },
   "repos": [
     {
+      "name": "phoenixTreeMapProject",
+      "category": "unity",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-25T19:50:57Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Jen's AR scene work has begun; the artist AR experiences (Amy, Lisa) are mostly complete"
+      ],
+      "next": [
+        "Finish Jen's AR scene"
+      ],
+      "blocked": []
+    },
+    {
       "name": "repoDash",
       "category": "tools",
       "status": "active",
       "branch": "main",
-      "last_commit_iso": "2026-08-25T18:57:21Z",
+      "last_commit_iso": "2026-08-25T19:46:03Z",
       "last_commit_rel": "",
       "stale": false,
       "dirty": false,
@@ -47,26 +67,6 @@
       ],
       "next": [
         "Keep ingesting weekly lecture chapters and outlines as the semester continues"
-      ],
-      "blocked": []
-    },
-    {
-      "name": "phoenixTreeMapProject",
-      "category": "unity",
-      "status": "active",
-      "branch": "main",
-      "last_commit_iso": "2026-08-14T16:30:07Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [
-        "Jen's AR scene work has begun; the artist AR experiences (Amy, Lisa) are mostly complete"
-      ],
-      "next": [
-        "Finish Jen's AR scene"
       ],
       "blocked": []
     },
