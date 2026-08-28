@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T05:24:52.714Z",
+  "generated": "2026-08-28T18:43:10.848Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -10,6 +10,26 @@
     "blocked": 0
   },
   "repos": [
+    {
+      "name": "repoDash",
+      "category": "tools",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-28T05:24:53Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Stood up GitHub Pages + Actions pipeline (MC_TOKEN secret, hourly build); switched accent color to pink; populated STATE.md across tracked repos"
+      ],
+      "next": [
+        "Watch MC_TOKEN expiration (Aug 30, 2026) and rotate before the hourly Action starts failing"
+      ],
+      "blocked": []
+    },
     {
       "name": "classLectureSearch",
       "category": "education",
@@ -27,26 +47,6 @@
       ],
       "next": [
         "Keep ingesting weekly lecture chapters and outlines as the semester continues"
-      ],
-      "blocked": []
-    },
-    {
-      "name": "repoDash",
-      "category": "tools",
-      "status": "active",
-      "branch": "main",
-      "last_commit_iso": "2026-08-27T20:30:55Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [
-        "Stood up GitHub Pages + Actions pipeline (MC_TOKEN secret, hourly build); switched accent color to pink; populated STATE.md across tracked repos"
-      ],
-      "next": [
-        "Watch MC_TOKEN expiration (Aug 30, 2026) and rotate before the hourly Action starts failing"
       ],
       "blocked": []
     },
