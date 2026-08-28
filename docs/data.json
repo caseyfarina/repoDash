@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-27T20:30:54.206Z",
+  "generated": "2026-08-28T05:24:52.714Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -11,11 +11,31 @@
   },
   "repos": [
     {
+      "name": "classLectureSearch",
+      "category": "education",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-27T21:08:44Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Added Week 15 outlines for AVC 185/200/287; search data auto-updates weekly with new lecture content"
+      ],
+      "next": [
+        "Keep ingesting weekly lecture chapters and outlines as the semester continues"
+      ],
+      "blocked": []
+    },
+    {
       "name": "repoDash",
       "category": "tools",
       "status": "active",
       "branch": "main",
-      "last_commit_iso": "2026-08-27T09:49:57Z",
+      "last_commit_iso": "2026-08-27T20:30:55Z",
       "last_commit_rel": "",
       "stale": false,
       "dirty": false,
@@ -44,26 +64,6 @@
       "pinned": false,
       "now": [],
       "next": [],
-      "blocked": []
-    },
-    {
-      "name": "classLectureSearch",
-      "category": "education",
-      "status": "active",
-      "branch": "main",
-      "last_commit_iso": "2026-08-26T03:11:16Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [
-        "Added Week 15 outlines for AVC 185/200/287; search data auto-updates weekly with new lecture content"
-      ],
-      "next": [
-        "Keep ingesting weekly lecture chapters and outlines as the semester continues"
-      ],
       "blocked": []
     },
     {
