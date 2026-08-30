@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T21:06:54.506Z",
+  "generated": "2026-08-30T23:30:23.689Z",
   "window_months": 4,
   "stale_days": 14,
   "summary": {
@@ -10,6 +10,26 @@
     "blocked": 0
   },
   "repos": [
+    {
+      "name": "repoDash",
+      "category": "tools",
+      "status": "active",
+      "branch": "main",
+      "last_commit_iso": "2026-08-30T21:06:55Z",
+      "last_commit_rel": "",
+      "stale": false,
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "pinned": false,
+      "now": [
+        "Stood up GitHub Pages + Actions pipeline (MC_TOKEN secret, hourly build); switched accent color to pink; populated STATE.md across tracked repos"
+      ],
+      "next": [
+        "Watch MC_TOKEN expiration (Aug 30, 2026) and rotate before the hourly Action starts failing"
+      ],
+      "blocked": []
+    },
     {
       "name": "pincushionedReloaded",
       "category": "",
@@ -40,26 +60,6 @@
       "pinned": false,
       "now": [],
       "next": [],
-      "blocked": []
-    },
-    {
-      "name": "repoDash",
-      "category": "tools",
-      "status": "active",
-      "branch": "main",
-      "last_commit_iso": "2026-08-30T17:29:59Z",
-      "last_commit_rel": "",
-      "stale": false,
-      "dirty": false,
-      "ahead": 0,
-      "behind": 0,
-      "pinned": false,
-      "now": [
-        "Stood up GitHub Pages + Actions pipeline (MC_TOKEN secret, hourly build); switched accent color to pink; populated STATE.md across tracked repos"
-      ],
-      "next": [
-        "Watch MC_TOKEN expiration (Aug 30, 2026) and rotate before the hourly Action starts failing"
-      ],
       "blocked": []
     },
     {
